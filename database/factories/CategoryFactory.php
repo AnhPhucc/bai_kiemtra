@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Category;
-use App\Models\Product;
+use Carbon\Carbon;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
@@ -16,11 +16,15 @@ class CategoryFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Category::class;
     public function definition(): array
     {
         return [
-            'tendanhmuc' =>$this ->faker->name(),
-            'danhmucthietyeu'=> rand(1,10),
+            'tenhang'=>$this->faker->name(),
+            'donvitinh'=>$this->faker->name(),
+            'slnhap' => $this->faker->randomFloat(),
+            'gianhap' => $this->faker->randomFloat(),
+            'giaban' => $this->faker->randomFloat(),
         ];
     }
 }

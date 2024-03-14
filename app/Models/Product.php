@@ -11,6 +11,6 @@ class Product extends Model
     protected $table = 'products';
     public $timestamps= false;
     protected $fillable= [
-        'tenhang','donvitinh','slnhap','gianhap','giaban'
+        'tendanhmuc','danhmucthietyeu'
     ];
 }

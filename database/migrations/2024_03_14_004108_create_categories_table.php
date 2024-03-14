@@ -12,10 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('madanhmuc');
-            $table->string('tendanhmuc');
-            $table->boolean('danhmucthietyeu');
-            $table->timestamps('');
+            
+                $table->bigIncrements('mahanghoa');
+                $table->string('tenhang');
+                $table->string('donvitinh');
+                $table->integer('slnhap');
+                $table->integer('gianhap');
+                $table->integer('giaban');
+                $table->timestamps();
         });
     }
 

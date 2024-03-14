@@ -2,19 +2,19 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
-class ProductsSeeder extends Seeder
+use Illuminate\Support\Facades\DB;
+use App\Models\Product;
+class ProductTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Products::factory()
-        ->count(20)
+        Product::factory()
+        ->count(15)
         ->create();
     }
 }

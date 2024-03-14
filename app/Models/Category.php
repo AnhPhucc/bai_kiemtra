@@ -9,8 +9,8 @@ class Category extends Model
 {
     use HasFactory;
     protected $table = 'categories';
-    public $timestamps =false;
-    protected $fillable = [
-        'tendanhmuc','dsthietyeu'
+    public $timestamps= false;
+    protected $fillable= [
+        'tenhang','donvitinh','slnhap','gianhap','giaban'
     ];
 }
